@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Три колонки</title>
+    <title>Адаптивные колонки через inline-block</title>
     <style>
-
-        .inline-block-container {
-            text-align: left; 
+       * {
+            box-sizing: border-box;
         }
 
-        .inline-block {
+        body {
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+            font-size: 0;
+            display: block;
+            white-space: nowrap; 
+        }
+
+        #left {
             display: inline-block;
-            vertical-align: top; 
-            margin-right: 10px;
-        }
-
-        #left-inline {
+            vertical-align: top;
+            padding: 10px;
+            font-size: 16px;
             width: 200px;
             background: #ccf;
         }
 
-        #center-inline {
-            width: 600px;
+        #center {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+            font-size: 16px;
+            width: calc(100% - 600px);
             background: #cfc;
-            display: inline-block; 
-            margin-right: 10px; 
+            white-space: normal;
+            word-wrap: break-word;
         }
 
-        #right-inline {
+        #right {
             width: 200px;
             background: #fcc;
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+            font-size: 16px;
         }
- 
     </style>
 </head>
 <body>
-
-    <h2> Использование inline-block</h2>
-    <div class="inline-block-container">
-        <div id="left-inline" class="inline-block">left<br>left<br>left<br>left<br>left</div>
-        <div id="center-inline" class="inline-block">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
-        <div id="right-inline" class="inline-block">right<br>right<br>right<br>right</div>
+    <div class="container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+        <div id="right">right<br>right<br>right<br>right</div>
     </div>
-
-
 </body>
 </html>

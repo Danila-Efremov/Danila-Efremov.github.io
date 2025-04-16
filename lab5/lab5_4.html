@@ -1,51 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Три колонки</title>
+    <title>Колонки через Flexbox</title>
     <style>
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
+        .container {
+            display: flex;          
         }
 
-        .flex-container {
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px; 
+        #left {
+            background: #ccf;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 200px;                    
         }
 
-        .flex-item {
-            padding: 10px; 
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+        #center {
+            background: #cfc;
+            box-sizing: border-box;
+            padding: 10px;
+            flex: 1;                
         }
 
-        #left-flex {
-            width: 200px; 
-            background: #ccf; 
-        }
-
-        #center-flex {
-            flex-grow: 1;
-            background: #cfc; 
-            margin: 0 10px; 
-        }
-
-        #right-flex {
-            width: 200px; 
-            background: #fcc; 
+        #right {
+            background: #fcc;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 200px;                  
         }
     </style>
 </head>
 <body>
-    <h2> Использование flexbox</h2>
-    <div class="flex-container">
-        <div id="left-flex" class="flex-item">left<br>left<br>left<br>left<br>left</div>
-        <div id="center-flex" class="flex-item">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
-        <div id="right-flex" class="flex-item">right<br>right<br>right<br>right</div>
+    <div class="container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+        <div id="right">right<br>right<br>right<br>right</div>
     </div>
-
-
-
 </body>
 </html>
